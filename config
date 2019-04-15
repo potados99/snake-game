@@ -2,4 +2,4 @@
 
 read -p "Enter target name: " name
 
-sed -i "s/TARGET*:=*/TARGET := $name/g" Makefile
+sed -i "/TARGET\t\t:= /s/.*/TARGET\t\t:= $name/g" Makefile
